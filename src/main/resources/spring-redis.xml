@@ -25,7 +25,7 @@
     </bean>
 
     <bean class="org.springframework.data.redis.core.RedisTemplate"
-          p:connection-factory-ref="jedisConnectionFactory" />
+          p:connectionFactory-ref="jedisConnectionFactory" />
 
     <bean id="redisSpringProxy" class="org.framework.xcode.nosql.redis.RedisSpringProxy">
     </bean>

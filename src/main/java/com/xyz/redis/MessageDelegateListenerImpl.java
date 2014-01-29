@@ -14,8 +14,11 @@ import java.util.Map;
  * Time: 9:28 AM
  * To change this template use File | Settings | File Templates.
  */
-public class MessageDelegateListenerImpl {
+public class MessageDelegateListenerImpl implements MessageDelegateListener {
 
+
+    // 如果redis收到消息，会调用handleMessage方法
+    @Override
     public void handleMessage(Serializable message) {
         //什么都不做,只输出
         if(message == null){

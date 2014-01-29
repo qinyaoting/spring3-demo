@@ -10,6 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: vuclip123
@@ -19,12 +21,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:com/xyz/redis/pubsubAppContext1.xml"})
+@ContextConfiguration(locations={"classpath:pubsubAppContext1.xml"})
 public class TestRedis {
 
 
     @Autowired
-    private RedisDAOImpl redisDAOImpl;
+    private RedisDAO redisDAO;
     @Before
     public void before() throws Exception {
     }
@@ -32,7 +34,7 @@ public class TestRedis {
     @Test
     public void testPublishMessage() throws Exception {
         String msg = "Hello, Redis!";
-        redisDAOImpl.sendMessage("java", msg); //发布字符串消息
+        redisDAO.sendMessage("java", msg); //发布字符串消息
 
 
         /*RedisTestBean bean = new RedisTestBean("123456");
@@ -44,6 +46,8 @@ public class TestRedis {
 
 
         Integer[] values = new Integer[]{21341,123123,12323};
-        redisDAOImpl.sendMessage("java", values);  //发布一个数组消息
+        redisDAO.sendMessage("java", values);  //发布一个数组消息
     }
+
+
 }
