@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+                    http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                    http://www.springframework.org/schema/context      
+                    http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<!-- 配置客户端消息工厂 -->
+	<bean id="jmsFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
+		<property name="connectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="${activemq.brokerURL}" /><!-- mq地址 -->
+				<property name="userName" value="${activemq.username}" /><!-- 用户名 -->
+				<property name="password" value="${activemq.password}" /><!-- 密码 -->
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">  
+        <property name="connectionFactory" ref="jmsFactory"/>
+        <property name="receiveTimeout" value="30000"/><!-- 由于receiver方法是同步的，所以我们在这里对接收设置超时时间-->  
+    </bean>
+	
+	
+	<!-- 发送消息的目的地（一个队列） --> 
+	<bean id="defaultDestination" class="org.apache.activemq.command.ActiveMQQueue">
+         <constructor-arg index="0" value="defaultDestination" />
+    </bean>
+	
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
+         <constructor-arg index="0" value="activeMQQueue" />
+    </bean>
+	 
+</beans>
