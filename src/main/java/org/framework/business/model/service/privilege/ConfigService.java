@@ -13,23 +13,34 @@ import java.util.Map;
  */
 public interface ConfigService extends BaseService {
 
+    public static final String CONFIG_API = "http://localhost:8080/";
+    public static final String CONFIG_LIST = CONFIG_API + "find";
+    public static final String ADD_CONFIG_ID = CONFIG_API + "add";
+    public static final String READ_CONFIG = CONFIG_API + "read";
+
+    public static final String APP_LIST = CONFIG_API + "listapps";
+
+    public static final String FORCE_SET = CONFIG_API + "forcedset";
+
+    public static final String SET = CONFIG_API + "set";
+
     List<Config> getConfigList();
 
     List<String> getCountryList();
 
-    boolean saveConfigId(String cfgid);
+    boolean saveConfig(String name);
 
-    boolean isCfgidExist(String cfgid);
+    boolean isConfigExist(String name);
 
-    boolean saveConfigXml(String cfgid, String xml);
+    boolean saveConfigXml(String name, String xml);
 
-    Map<String,String> getConfigById(String cfgid);
+    Map<String,String> getConfigByName(String name);
 
     Map<String,String> getAppMap();
 
-    boolean forceActiveConfig(String configid, String appid, String version);
+    boolean forceActiveConfig(String name, String appid, String version);
 
-    boolean activeConfig(String configid, String appid, String version);
+    boolean activeConfig(String name, String appid, String version);
 
-    boolean updateConfigXmlByTagMap(String cfgid, Map<String,String> kv);
+    boolean updateConfigXmlByTagMap(String name, Map<String,String> kv);
 }

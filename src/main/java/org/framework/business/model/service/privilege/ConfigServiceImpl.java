@@ -1,5 +1,6 @@
 package org.framework.business.model.service.privilege;
 
+import org.framework.business.model.dao.privilege.ConfigDao;
 import org.framework.business.model.dao.privilege.UserDao;
 import org.framework.business.model.entity.Config;
 import org.framework.business.model.entity.DynamicBean;
@@ -32,6 +33,8 @@ import java.util.Map;
 @Service("configService")
 public class ConfigServiceImpl implements ConfigService {
 
+    @Autowired
+    private ConfigDao configDao;
 
     public List<Config> getConfigList() {
         String result = HttpRequest.get(CONFIG_LIST).body();
@@ -46,7 +49,7 @@ public class ConfigServiceImpl implements ConfigService {
                     Config config = new Config();
                     String isActived = cNode.getAttribute("active");
                     if ("true".equals(isActived)) config.setActived(isActived);
-                    config.setCfgid(cNode.getText());
+                    config.setName(cNode.getText());
                     cfgidList.add(config);
                 }
             }
@@ -104,9 +107,9 @@ public class ConfigServiceImpl implements ConfigService {
         return appMap;
     }
 
-    public boolean saveConfigId(String cfgid) {
+    public boolean saveConfig(String name) {
         boolean isSaveSuccess = false;
-        String url = ADD_CONFIG_ID + "?cfgid="+cfgid;
+        String url = ADD_CONFIG_ID + "?cfgid="+name;
         String result = HttpRequest.get(url).body();
         try {
             XinXmlElementNode node = new XinXmlParser().parseString(result);
@@ -114,6 +117,8 @@ public class ConfigServiceImpl implements ConfigService {
                 String status = node.getAttribute("status");
                 if ("success".equals(status)) {
                     isSaveSuccess = true;
+                    // backup in mysql when post data successfully
+                    configDao.save(new Config(name));
                 } else if ("failure".equals(status)) {
 
                 }
@@ -130,9 +135,9 @@ public class ConfigServiceImpl implements ConfigService {
         return isSaveSuccess;
     }
 
-    public boolean saveConfigXml(String cfgid, String xml) {
+    public boolean saveConfigXml(String name, String xml) {
 
-        String url = ADD_CONFIG_ID + "?cfgid=" + cfgid;
+        String url = ADD_CONFIG_ID + "?cfgid=" + name;
         boolean flag = false;
         try {
             int statusCode = uploadToServer(url, xml);
@@ -157,23 +162,23 @@ public class ConfigServiceImpl implements ConfigService {
 
     }
 
-    public boolean isCfgidExist(String cfgid) {
+    public boolean isConfigExist(String name) {
 
         List<Config> configList = getConfigList();
         List<String> cfgids = new ArrayList<String>();
         for (Config cfg : configList) {
-            cfgids.add(cfg.getCfgid());
+            cfgids.add(cfg.getName());
         }
-        return cfgids.contains(cfgid);
+        return cfgids.contains(name);
     }
 
-    protected String getConfigXmlById(String cfgid) {
-        return HttpRequest.get(READ_CONFIG + "?cfgid="+cfgid).body();
+    protected String getConfigXmlById(String name) {
+        return HttpRequest.get(READ_CONFIG + "?cfgid="+name).body();
     }
 
-    public Map<String,String> getConfigById(String cfgid) {
+    public Map<String,String> getConfigByName(String name) {
 
-        String xml = getConfigXmlById(cfgid);
+        String xml = getConfigXmlById(name);
         Map<String,String> map = null;
         XinXmlElementNode node;
         try {
@@ -188,12 +193,12 @@ public class ConfigServiceImpl implements ConfigService {
 
                 XinXmlElementNode[] childNodes = node.getElements("avp");
                 for (XinXmlElementNode childNode : childNodes) {
-                    String name =  childNode.getAttribute("a");
+                    String tagNname =  childNode.getAttribute("a");
                     //name = name.replaceAll("\\.","_");
                     String value = childNode.getText();
                     //if ("".equals(value)) continue;
                     //bean.setValue(name, escape4html(value));
-                    map.put(name,escape4html(value));
+                    map.put(tagNname,escape4html(value));
                 }
             }
         } catch (IOException e) {
@@ -266,14 +271,14 @@ public class ConfigServiceImpl implements ConfigService {
         return sb.toString();
     }
 
-    public boolean forceActiveConfig(String configid, String appid, String version) {
+    public boolean forceActiveConfig(String name, String appid, String version) {
         boolean isUpdateSuccess = false;
 
         String url = "";
         if ("default".equals(version) || "".equals(version)) {
-            url = FORCE_SET + "?cfgid=" + configid + "&appid=" + appid;
+            url = FORCE_SET + "?cfgid=" + name + "&appid=" + appid;
         } else {
-            url = FORCE_SET + "?cfgid=" + configid + "&appid=" + appid + "&ver=" + version;
+            url = FORCE_SET + "?cfgid=" + name + "&appid=" + appid + "&ver=" + version;
         }
         String result = HttpRequest.get(url).body();
         try {
@@ -300,14 +305,14 @@ public class ConfigServiceImpl implements ConfigService {
         return isUpdateSuccess;
     }
 
-    public boolean activeConfig(String configid, String appid, String version) {
+    public boolean activeConfig(String name, String appid, String version) {
         boolean isUpdateSuccess = false;
 
         String url = "";
         if ("default".equals(version) || "".equals(version)) {
-            url = SET + "?cfgid=" + configid + "&appid=" + appid;
+            url = SET + "?cfgid=" + name + "&appid=" + appid;
         } else {
-            url = SET + "?cfgid=" + configid + "&appid=" + appid + "&ver=" + version;
+            url = SET + "?cfgid=" + name + "&appid=" + appid + "&ver=" + version;
         }
         String result = HttpRequest.get(url).body();
         try {
@@ -334,10 +339,10 @@ public class ConfigServiceImpl implements ConfigService {
         return isUpdateSuccess;
     }
 
-    public boolean updateConfigXmlByTagMap(String cfgid, Map<String,String> kv) {
+    public boolean updateConfigXmlByTagMap(String name, Map<String,String> kv) {
         boolean flag = false;
-        if (null == cfgid || "".equals(cfgid) || null == kv) return flag;
-        String url = ADD_CONFIG_ID + "?cfgid=" + cfgid;
+        if (null == name || "".equals(name) || null == kv) return flag;
+        String url = ADD_CONFIG_ID + "?cfgid=" + name;
         StringBuilder sb = new StringBuilder("<config>");
         for(String key : kv.keySet())
             sb.append("<avp a=\"" + key + "\">"+kv.get(key)+"</avp>");

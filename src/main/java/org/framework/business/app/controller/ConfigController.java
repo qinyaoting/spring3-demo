@@ -47,6 +47,15 @@ public class ConfigController {
         return "config/new";
     }
 
+    @RequestMapping(value="/step1.action",method=RequestMethod.GET)
+    public String step1(ModelMap modelMap){
+
+        //modelMap.addAttribute("countryList",configService.getCountryList());
+        //modelMap.addAttribute("geoList",getGeoList());
+        //modelMap.addAttribute("tagList",getTagList());
+        return "config/step1";
+    }
+
     private String[] getGeoList () {
         return new String[]{"geo.IN.AP","geo.IN.UP","geo.US","geo.CN"};
     }
@@ -108,16 +117,16 @@ public class ConfigController {
         // xx return "forward:/config/index";
     }
 
-    @RequestMapping(value = "/add-cfgid", method = RequestMethod.POST)
-    public @ResponseBody String saveConfigId(@RequestParam(value = "cfgid", required = true) String cfgid, Model model) {
+    @RequestMapping(value = "/check", method = RequestMethod.POST)
+    public @ResponseBody String saveConfigId(@RequestParam(value = "name", required = true) String name, Model model) {
         String message = "Save failed , try again later";
-        if (configService.isCfgidExist(cfgid)) {
+        if (configService.isConfigExist(name)) {
             message = "The config id already exist";
         } else {
-            boolean isSucc = configService.saveConfigId(cfgid);
+            boolean isSucc = configService.saveConfig(name);
             if (isSucc) {
                 message = "Success";
-                LOG.error("cfgid="+cfgid);
+                LOG.error("cfgid="+name);
             } else {
                 message = "Save data failed, try again later";
             }
@@ -127,11 +136,11 @@ public class ConfigController {
     }
 
     @RequestMapping(value="/edit.action",method=RequestMethod.GET)
-    public String editConfig(@RequestParam(value = "cfgid", required = true) String cfgid, Model model){
+    public String editConfig(@RequestParam(value = "name", required = true) String name, Model model){
 
         String message = "Save failed , try again later";
-        if (configService.isCfgidExist(cfgid)) {
-            Map<String,String> allConfigMap = configService.getConfigById(cfgid);
+        if (configService.isConfigExist(name)) {
+            Map<String,String> allConfigMap = configService.getConfigByName(name);
             Map<String,Map> regiontag = new HashMap<String,Map>();
             Map<String, String> othertag = new HashMap<String, String>();
             othertag.putAll(allConfigMap);
@@ -157,7 +166,7 @@ public class ConfigController {
                 }
                 regiontag.put(tag,regionTagMap);
             }
-            model.addAttribute("cfgid",cfgid);
+            model.addAttribute("cfgid",name);
             model.addAttribute("regiontag",regiontag);
             model.addAttribute("othertag",othertag);
             model.addAttribute("geoList",getGeoList());
@@ -167,10 +176,10 @@ public class ConfigController {
     }
 
     @RequestMapping(value="/set.action",method=RequestMethod.GET)
-    public String setConfig(@RequestParam(value = "cfgid", required = true) String cfgid, ModelMap modelMap){
+    public String setConfig(@RequestParam(value = "name", required = true) String name, ModelMap modelMap){
         Map<String,String> apps = configService.getAppMap();
         modelMap.addAttribute("apps",apps);
-        modelMap.addAttribute("currcfgid",cfgid);
+        modelMap.addAttribute("currcfgid",name);
         return "config/set";
     }
 

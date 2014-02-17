@@ -1,5 +1,9 @@
 package org.framework.business.model.entity;
 
+import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: vuclip123
@@ -7,21 +11,37 @@ package org.framework.business.model.entity;
  * Time: 5:46 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Config {
 
-    private String cfgid;
+@Entity
+@Table(name="config")
+public class Config implements Serializable {
+
+    private static final long serialVersionUID = -3838732995856086554L;
+
+    @Id
+    @GeneratedValue
+    private Long cid;
+
+    @Column(length=20,nullable=false)
+    //@Pattern(regexp = "[A-Za-z0-9]{5,20}", message = "以字母开头,5-20位")
+    private String name;
+
     private String actived;
-    private String timestamp;
-    private String status;
-    private String header;
 
-
-    public String getCfgid() {
-        return cfgid;
+    public Long getCid() {
+        return cid;
     }
 
-    public void setCfgid(String cfgid) {
-        this.cfgid = cfgid;
+    public void setCid(Long cid) {
+        this.cid = cid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getActived() {
@@ -32,27 +52,10 @@ public class Config {
         this.actived = actived;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public Config(String name) {
+        this.name = name;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getHeader() {
-        return header;
-    }
-
-    public void setHeader(String header) {
-        this.header = header;
+    public Config() {
     }
 }

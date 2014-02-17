@@ -39,21 +39,21 @@
         </tr>
         <c:forEach items="${configList}" var="config">
             <tr>
-                <td align="center">${config.cfgid} </td>
+                <td align="center">${config.name} </td>
 
-                <td  align="center"><a href="edit.action?cfgid=${config.cfgid}">header</a></td>
+                <td  align="center"><a href="edit.action?name=${config.name}">header</a></td>
                 <!--
-                <td  align="center"><a href="/apps/configs/menus?cfgid=${config.cfgid}&flow=edit">menu slots</a></td> -->
+                <td  align="center"><a href="/apps/configs/menus?cfgid=${config.name}&flow=edit">menu slots</a></td> -->
                 <td  align="center">
                     <c:if test="${config.actived != 'true'}">
-                        <a href="set.action?cfgid=${config.cfgid}">Active</a>
+                        <a href="set.action?name=${config.name}">Active</a>
                     </c:if>
                 </td>
             </tr>
         </c:forEach>
     </table>
     <hr /><br/>
-    <div class="botnav"><a href="new.action">New config</a></div>
+    <div class="botnav"><a href="step1.action">New config</a></div>
 </div>
 </body>
 </html>
