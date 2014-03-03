@@ -71,6 +71,44 @@
                 }
             });
 
+            $("#addgroup").bind("click",function(){
+                var group = $("input[name='groupname']").val();
+                var message = $(this).next();
+                if (group == "") {
+                    message.html("Group name can't be blank").css("color","red");
+                } else {
+                    $(this).attr('disabled',true);
+                    message.html("Sending...");
+                    $.ajax({
+                        type:"POST",
+                        url:"addgroup",
+                        data:{
+                            group:group
+                        },
+                        success:function(data){		//{"message":"Send Success"}
+
+
+                            var arr = eval('('+data+')')
+                            var msg = arr.message;
+                            message.html(msg).css("color","red")
+                            if ((msg.indexOf("Success")) >= 0) {
+                                //$("input[name='cfgid']").attr('readonly',true)
+                                //$("#saveBtn").attr('disabled',true);
+                            } else {
+                                //$("#form input:eq(1)").attr('disabled',false);
+                                //$("#saveBtn").animate( {"opacity": 1}, 3000  ,function(){
+                                    //$("#saveBtn").attr('disabled',false);
+                                //});
+                            }
+                        },
+                        error:function(){
+                            message.html("Net error, try again later ");
+                            $("#addgroup").attr('disabled',false);
+                        }
+                    });
+                }
+            });
+
             $(".addBtn").bind("click",function(){
                 //取值，添加到input里，删除select中的该元素
                 var text = $(this).prev().find("option:selected").text();
@@ -125,6 +163,7 @@
 <body>
 <div class="main">
 <h2>New Config</h2>
+<form action="create.action" method="post" id="nextForm">
 <table width="100%" cellpadding="8">
 <tr bgcolor="#EEE">
     <td width="32%"><h3>Config Id</h3></td>
@@ -136,11 +175,24 @@
 
 
 </table>
-
+<div>
+    <h3>Common</h3>
+    <div id="taglist"></div>
+    <a href="javascript:" class="addtag">Add new tag</a><br/><br/><hr/><br/>
+</div>
+<hr/>
+<div>
+    <h3>Other</h3>
+</div>
 <hr/> <br/>
-<div id="taglist"></div>
-<a href="javascript:" class="addtag">Add new tag</a><br/><br/><hr/><br/>
-<input type="button" value="Save" id="nextBtn" class="btn1"> <span id="msg2"></span>
+
+
+    Add new group
+    <input type="input" name="groupname" value="" placeholder="">
+    <input type="button" value="Add" id="addgroup" class="btn1"/> <span id="msg3"></span>
+    <br/><br/><hr/><br/>
+    <input type="button" value="Save" id="nextBtn" class="btn1"> <span id="msg2"></span>
+</form>
 <div class="botnav"><a href="index.action">Home</a></div>
 </div>
 </body>

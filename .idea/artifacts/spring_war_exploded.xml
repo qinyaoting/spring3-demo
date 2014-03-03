@@ -1,8 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="spring:war exploded">
-    <output-path>$PROJECT_DIR$/target/spring</output-path>
+    <output-path>$PROJECT_DIR$/classes/artifacts/spring_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="spring/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="spring" />
@@ -43,7 +42,6 @@
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
           <element id="library" level="project" name="Maven: logkit:logkit:1.0.1" />
           <element id="library" level="project" name="Maven: avalon-framework:avalon-framework:4.1.3" />
-          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.4" />
           <element id="library" level="project" name="Maven: org.apache.activemq:activemq-all:5.8.0" />
           <element id="library" level="project" name="Maven: org.apache.activemq:activemq-amqp:5.8.0" />
           <element id="library" level="project" name="Maven: org.apache.activemq:activemq-broker:5.8.0" />
@@ -85,8 +83,10 @@
           <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.1.Final" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.28" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-nop:1.7.5" />
+          <element id="library" level="project" name="Maven: junit:junit:4.10" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="spring/web/Web" />
     </root>
   </artifact>
 </component>

@@ -65,7 +65,7 @@ public class ConfigController {
     }
 
     @RequestMapping(value="/create.action",method=RequestMethod.POST)
-    public ModelAndView saveConfigByConfigId(@RequestParam(value = "cfgid", required = true) String cfgid, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request){
+    public ModelAndView saveConfigByConfigId(@RequestParam(value = "name", required = true) String name, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request){
 
         Map<String,String> map = new HashMap<String,String>();
         Map<String,String> filteredmap = new HashMap<String,String>();
@@ -84,6 +84,8 @@ public class ConfigController {
             [tagname2,version.block] [tagvalue, 1.0.2,1.2.2]
              .............name....................value............
              */
+            if (key.equals("name"))
+                continue;
             if (key.contains("tagname")) {
                 String num = key.split("tagname")[1];
                 String tagName = map.get(key);
@@ -104,7 +106,7 @@ public class ConfigController {
         }
         sb.append("</config>");
 
-        boolean isSucc = configService.saveConfigXml(cfgid, sb.toString());
+        boolean isSucc = configService.saveConfigXml(name, sb.toString());
         //modelMap.addAttribute("config",new Config());
         //modelMap.addAttribute("countryList",configService.getCountryList());
         //modelMap.addAttribute("userInfo",new UserInfo());
@@ -224,6 +226,37 @@ public class ConfigController {
         }
 
     }
+
+    @RequestMapping(value = "/create_group", method = RequestMethod.POST)
+    public @ResponseBody String createGroup(@RequestParam(value = "groupname", required = true) String groupname, Model model) {
+        String message = "Save failed , try again later";
+        //====
+        if (configService.isConfigExist(groupname)) {
+            message = "The group already exist";
+        } else {
+            boolean isSucc = configService.saveConfig(groupname);
+            if (isSucc) {
+                message = "Success";
+                LOG.error("cfgid="+groupname);
+            } else {
+                message = "Save data failed, try again later";
+            }
+        }
+        String jsonStr = "{\"message\":\""+message+"\"}";
+        return jsonStr;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     @RequestMapping(value = "/save-user.action", method = {RequestMethod.POST})
 	public String toSaveUser(@ModelAttribute("userInfo") @Valid UserInfo userInfo, BindingResult bindingResult, ModelMap modelMap){

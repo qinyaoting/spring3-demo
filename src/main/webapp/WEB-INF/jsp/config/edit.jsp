@@ -156,55 +156,14 @@
         <td width="32%"><h3>Config Id</h3></td>
         <td>
             <c:if test="${cfgid == null}">
-                <input type="input" name="cfgid" value="" placeholder="Ex : nokia-1.0.1">
+                <input type="input" name="name" value="" placeholder="Ex : nokia-1.0.1">
                 <input type="button" value="Save" id="saveBtn" class="btn1"/> <span id="msg"></span>
             </c:if>
             <c:if test="${cfgid != null}">
-                <input type="input" name="cfgid" value="${cfgid}" placeholder="Ex : nokia-1.0.1" readonly="true">    <!-- 1 -->
+                <input type="input" name="name" value="${cfgid}" placeholder="Ex : nokia-1.0.1" readonly="true">    <!-- 1 -->
             </c:if>
         </td>
     </tr>
-    <c:forEach items="${regiontag}" var="regiontag">
-        <c:set var="tag" value="${regiontag.key}" />
-        <c:set var="map" value="${regiontag.value}" />
-        <tr bgcolor="#EEE">
-            <td><h3>${tag}</h3> description...</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>
-                            <select>
-
-                                <c:if test="${map[tag] == null}">
-                                    <option value="${tag}">${tag}</option>
-                                </c:if>
-
-
-                                <c:forEach var="geo" items="${geoList}">
-                                    <!-- 定义连个变量 -->
-                                    <c:set var="tag_geo" value="${tag}.${geo}" />
-                                    <!-- 判断map里是否有某个tag -->
-                                    <c:if test="${map[tag_geo] == null}">
-                                        <option value="${tag_geo}">${tag_geo}</option>
-                                    </c:if>
-
-                                </c:forEach>
-                            </select> <a href="javascript:" class="addBtn">Add</a>
-                            <div>
-                            <c:forEach items="${map}" var="entry">
-                                <div><label>${entry.key}</label> <input type="text" name="${entry.key}" value="${entry.value}"/> <a href="javascript:" class="delBtn">X</a></div>
-                            </c:forEach>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"> </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </c:forEach>
 </tr>
 </table>
 
