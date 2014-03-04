@@ -17,7 +17,7 @@ import java.util.Date;
  */
 public class RedisDAOImpl implements RedisDAO {
 
-    private RedisTemplate<String, Object> redisTemplate = null;
+    private RedisTemplate<String, Object> redisTemplate22 = null;
 
     public RedisDAOImpl() {
 
@@ -25,16 +25,16 @@ public class RedisDAOImpl implements RedisDAO {
 
     //向redis中发消息
     public void sendMessage(String channel, Serializable message) {
-        redisTemplate.convertAndSend(channel, message);
+        redisTemplate22.convertAndSend(channel, message);
     }
 
 
     public RedisTemplate getRedisTemplate() {
-        return redisTemplate;
+        return redisTemplate22;
     }
 
     public void setRedisTemplate(RedisTemplate redisTemplate) {
-        this.redisTemplate = redisTemplate;
+        this.redisTemplate22 = redisTemplate;
     }
 
 
