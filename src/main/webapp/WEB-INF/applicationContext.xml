@@ -32,7 +32,7 @@
 				<value>classpath:jdbc.properties</value>
 				<!-- 下面这俩 按需要 开放 -->
 				<value>classpath:mq.properties</value>
-				<!-- <value>classpath:redis.properties</value> -->
+				<value>classpath:redis.properties</value>
 			</list>
 		</property>
 	</bean>

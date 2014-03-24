@@ -61,6 +61,7 @@
 			/WEB-INF/applicationContext.xml
 			/WEB-INF/spring-jpa.xml
 			/WEB-INF/spring-jms.xml
+            /WEB-INF/spring-redis.xml
 		</param-value>
 	</context-param>
 
