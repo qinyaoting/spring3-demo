@@ -5,6 +5,7 @@ import org.framework.business.model.entity.Config;
 import org.framework.business.model.entity.UserInfo;
 import org.framework.business.model.service.privilege.ConfigService;
 import org.framework.business.model.service.privilege.UserService;
+import org.framework.xcode.nosql.redis.RedisSpringProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,9 +42,9 @@ public class ConfigController {
     @RequestMapping(value="/new.action",method=RequestMethod.GET)
     public String newConfig(ModelMap modelMap){
 
-        modelMap.addAttribute("countryList",configService.getCountryList());
-        modelMap.addAttribute("geoList",getGeoList());
-        modelMap.addAttribute("tagList",getTagList());
+        //modelMap.addAttribute("countryList",configService.getCountryList());
+        //modelMap.addAttribute("geoList",getGeoList());
+        modelMap.addAttribute("groups", getDefaultGroup());
         return "config/new";
     }
 
@@ -53,6 +54,7 @@ public class ConfigController {
         //modelMap.addAttribute("countryList",configService.getCountryList());
         //modelMap.addAttribute("geoList",getGeoList());
         //modelMap.addAttribute("tagList",getTagList());
+        modelMap.addAttribute("groups", getDefaultGroup());
         return "config/step1";
     }
 
@@ -67,8 +69,12 @@ public class ConfigController {
     @RequestMapping(value="/create.action",method=RequestMethod.POST)
     public ModelAndView saveConfigByConfigId(@RequestParam(value = "name", required = true) String name, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request){
 
-        Map<String,String> map = new HashMap<String,String>();
-        Map<String,String> filteredmap = new HashMap<String,String>();
+        Map<String,String> map = new TreeMap<String,String>();
+        Map<String,String> filteredmap = new TreeMap<String,String>();
+        Map<String,List<String>> tagMap = new HashMap<String,List<String>>();
+        tagMap.put("common", new ArrayList<String>());
+        tagMap.put("other", new ArrayList<String>());
+        //List<String> tags = new ArrayList<String>();
         Enumeration paraNames = request.getParameterNames();
         while (paraNames.hasMoreElements()){
             String paramName = (String)paraNames.nextElement();
@@ -84,17 +90,20 @@ public class ConfigController {
             [tagname2,version.block] [tagvalue, 1.0.2,1.2.2]
              .............name....................value............
              */
-            if (key.equals("name"))
+            if (key.equals("name") || key.equals("groupname"))
                 continue;
-            if (key.contains("tagname")) {
-                String num = key.split("tagname")[1];
+            if (key.contains("common_name")) {
+                String num = key.split("common_name")[1];
                 String tagName = map.get(key);
-                String tagValue = map.get("tagvalue" + num);
+                String tagValue = map.get("common_value" + num);
                 filteredmap.put(tagName,tagValue.trim());
+                tagMap.get("common").add(tagName);
             } else {
-                if (!key.contains("tagvalue"))
+                if (!key.contains("common_value"))
                     filteredmap.put(key,map.get(key));
             }
+
+
         }
 
         StringBuilder sb = new StringBuilder();
@@ -107,6 +116,12 @@ public class ConfigController {
         sb.append("</config>");
 
         boolean isSucc = configService.saveConfigXml(name, sb.toString());
+
+        if (isSucc) {
+            redisSpringProxy.save(name + "_common", tagMap.get("common"));
+            Object obj = redisSpringProxy.read(name + "_common");
+
+        }
         //modelMap.addAttribute("config",new Config());
         //modelMap.addAttribute("countryList",configService.getCountryList());
         //modelMap.addAttribute("userInfo",new UserInfo());
@@ -118,6 +133,9 @@ public class ConfigController {
 
         // xx return "forward:/config/index";
     }
+
+    @Autowired
+    private RedisSpringProxy redisSpringProxy;
 
     @RequestMapping(value = "/check", method = RequestMethod.POST)
     public @ResponseBody String saveConfigId(@RequestParam(value = "name", required = true) String name, Model model) {
@@ -137,11 +155,19 @@ public class ConfigController {
         return jsonStr;
     }
 
+    private String[] getDefaultGroup () {
+        return new String[]{"Common sap","App sap","Other sap","For Android App","For Java App"};
+    }
+
+
     @RequestMapping(value="/edit.action",method=RequestMethod.GET)
     public String editConfig(@RequestParam(value = "name", required = true) String name, Model model){
 
         String message = "Save failed , try again later";
         if (configService.isConfigExist(name)) {
+
+            Object obj = redisSpringProxy.read(name + "_common");
+
             Map<String,String> allConfigMap = configService.getConfigByName(name);
             Map<String,Map> regiontag = new HashMap<String,Map>();
             Map<String, String> othertag = new HashMap<String, String>();

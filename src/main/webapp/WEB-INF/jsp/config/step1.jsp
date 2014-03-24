@@ -134,8 +134,8 @@
                     index = tagName.split('name')[1];
                     index++;
                 }
-                var name = "tagname"+index;
-                var value = "tagvalue"+index;
+                var name = "common_name"+index;
+                var value = "common_value"+index;
                 $("#taglist").append('<div>Tag name <input type=input name='+name+' value=""> Tag value <input type=input name='+value+' value="">' + ' <a href="javascript:" class="deltag">X</a></div>');
 
             });
@@ -175,17 +175,12 @@
 
 
 </table>
-<div>
-    <h3>Common</h3>
-    <div id="taglist"></div>
-    <a href="javascript:" class="addtag">Add new tag</a><br/><br/><hr/><br/>
-</div>
-<hr/>
-<div>
-    <h3>Other</h3>
-</div>
-<hr/> <br/>
 
+    <c:forEach var="group" items="${groups}">
+        <h3>${group}</h3>
+        <div id="taglist"></div>
+        <a href="javascript:" class="addtag">Add new tag</a><br/><br/><hr/><br/>
+    </c:forEach>
 
     Add new group
     <input type="input" name="groupname" value="" placeholder="">

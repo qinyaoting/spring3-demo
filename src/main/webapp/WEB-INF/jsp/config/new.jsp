@@ -158,7 +158,9 @@
         </tr>
     </c:forEach>
 </tr>
-
+<c:forEach var="group" items="${groups}">
+    <h3>${tag}</h3>
+</c:forEach>
 
 </table>
 
