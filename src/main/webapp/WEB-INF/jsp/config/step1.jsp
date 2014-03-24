@@ -134,8 +134,9 @@
                     index = tagName.split('name')[1];
                     index++;
                 }
-                var name = "common_name"+index;
-                var value = "common_value"+index;
+                var prefix = $(this).prev().prev().html();
+                var name = prefix + "_name"+index;
+                var value = prefix + "_value"+index;
                 $("#taglist").append('<div>Tag name <input type=input name='+name+' value=""> Tag value <input type=input name='+value+' value="">' + ' <a href="javascript:" class="deltag">X</a></div>');
 
             });
