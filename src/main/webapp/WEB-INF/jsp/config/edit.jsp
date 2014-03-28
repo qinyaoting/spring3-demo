@@ -156,11 +156,11 @@
         <td width="32%"><h3>Config Id</h3></td>
         <td>
             <c:if test="${cfgid == null}">
-                <input type="input" name="name" value="" placeholder="Ex : nokia-1.0.1">
+                <input type="input" name="cfgid" value="" placeholder="Ex : nokia-1.0.1">
                 <input type="button" value="Save" id="saveBtn" class="btn1"/> <span id="msg"></span>
             </c:if>
             <c:if test="${cfgid != null}">
-                <input type="input" name="name" value="${cfgid}" placeholder="Ex : nokia-1.0.1" readonly="true">    <!-- 1 -->
+                <input type="input" name="cfgid" value="${cfgid}" placeholder="Ex : nokia-1.0.1" readonly="true">    <!-- 1 -->
             </c:if>
         </td>
     </tr>

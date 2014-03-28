@@ -34,7 +34,7 @@
 
             $("#saveBtn").bind("click",function(){
                 //var content = $("#form2 input:first").val();
-                var name = $("input[name='name']").val();
+                var name = $("input[name='cfgid']").val();
 
                 if (name == "") {
                     $("#msg").html("Config Id can't be blank").css("color","red");
@@ -134,9 +134,8 @@
                     index = tagName.split('name')[1];
                     index++;
                 }
-                var prefix = $(this).prev().prev().html();
-                var name = prefix + "_name"+index;
-                var value = prefix + "_value"+index;
+                var name = "tagname"+index;
+                var value = "tagvalue"+index;
                 $("#taglist").append('<div>Tag name <input type=input name='+name+' value=""> Tag value <input type=input name='+value+' value="">' + ' <a href="javascript:" class="deltag">X</a></div>');
 
             });
@@ -169,24 +168,29 @@
 <tr bgcolor="#EEE">
     <td width="32%"><h3>Config Id</h3></td>
     <td>
-        <input type="input" name="name" value="" placeholder="Ex : nokia-1.0.1">
+        <input type="input" name="cfgid" value="" placeholder="Ex : nokia-1.0.1">
         <input type="button" value="Save" id="saveBtn" class="btn1"/> <span id="msg"></span>
     </td>
 </tr>
 
 
 </table>
+<div>
+    <h3>Common</h3>
+    <div id="taglist"></div>
+    <a href="javascript:" class="addtag">Add new tag</a><br/><br/><hr/><br/>
+</div>
+<hr/>
+<div>
+    <h3>Other</h3>
+</div>
+<hr/> <br/>
 
-    <c:forEach var="group" items="${groups}">
-        <h3>${group}</h3>
-        <div id="taglist"></div>
-        <a href="javascript:" class="addtag">Add new tag</a><br/><br/><hr/><br/>
-    </c:forEach>
-
+    <!--
     Add new group
     <input type="input" name="groupname" value="" placeholder="">
     <input type="button" value="Add" id="addgroup" class="btn1"/> <span id="msg3"></span>
-    <br/><br/><hr/><br/>
+    <br/><br/><hr/><br/>    -->
     <input type="button" value="Save" id="nextBtn" class="btn1"> <span id="msg2"></span>
 </form>
 <div class="botnav"><a href="index.action">Home</a></div>
