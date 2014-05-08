@@ -371,6 +371,17 @@
           <version>2.4</version>
       </dependency>
 
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>17.0</version>
+      </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.10</version>
+      </dependency>
+
 
   </dependencies>
   <build>

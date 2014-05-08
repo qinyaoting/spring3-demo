@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/spring_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/webapp_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/webapp_war_exploded.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/framework/business/app/controller/ConfigController.java" afterPath="$PROJECT_DIR$/src/main/java/org/framework/business/app/controller/ConfigController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/baobaotao/junit/ObjectTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/baobaotao/junit/OptionalTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/baobaotao/junit/PreconditionsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_15_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_17_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.iml" afterPath="$PROJECT_DIR$/spring.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/spring_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/step1.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/step1.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webapp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1390876700254" ignored="false" />
-    <file path="/fragment.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1392625537680" ignored="false" />
+    <file path="/fragment.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1399532079258" ignored="false" />
     <file path="/Download.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1390873362554" ignored="false" />
-    <file path="/Dummy.txt" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1393829591981" ignored="false" />
+    <file path="/Dummy.txt" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1399530409609" ignored="false" />
     <file path="/MoneyTest.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1390956556325" ignored="false" />
     <file path="/ConfigServiceImplTest.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1390957425250" ignored="false" />
     <file path="/UserDaoImplTest.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1390960072102" ignored="false" />
@@ -37,6 +37,7 @@
     <file path="/ConfigService.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1392629893397" ignored="false" />
     <file path="/edit.jsp" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1392687789677" ignored="false" />
     <file path="/log4j.properties" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1392688963196" ignored="false" />
+    <file path="/OptionalTest.java" changelist="357f33b0-96ed-49ba-a7e2-dc5363f90dc5" time="1399530944700" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,40 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/org/framework/business/app/controller/ConfigController.java" line="34" class="org.framework.business.app.controller.ConfigController" package="org.framework.business.app.controller">
         <option name="ENABLED" value="true" />
@@ -94,41 +129,49 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/OptionalTest.java" line="23" class="com.baobaotao.junit.OptionalTest" package="com.baobaotao.junit">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/OptionalTest.java" line="42" class="com.baobaotao.junit.OptionalTest" package="com.baobaotao.junit">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/PreconditionsTest.java" line="55" class="com.baobaotao.junit.PreconditionsTest" package="com.baobaotao.junit">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -152,10 +195,8 @@
       <file leaf-file-name="edit.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="4" selection-start="6947" selection-end="6947" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1392687806800" expanded="false" signature="6770:6917" placeholder="..." />
-              </folding>
+            <state line="166" column="4" selection-start="6949" selection-end="6949" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,10 +210,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConfigService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/framework/business/model/service/privilege/ConfigService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="904" selection-end="904" vertical-scroll-proportion="0.8450704">
+            <state line="32" column="12" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="377" column="19" selection-start="11579" selection-end="11579" vertical-scroll-proportion="0.82608694">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OptionalTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/OptionalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="93" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreconditionsTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/PreconditionsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="0" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1007#1016#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/ObjectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="184" column="41" selection-start="5551" selection-end="5551" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,10 +260,8 @@
       <file leaf-file-name="step1.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/step1.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="113" selection-start="4840" selection-end="4840" vertical-scroll-proportion="-17.333334">
-              <folding>
-                <marker date="1393832307389" expanded="true" signature="1678:3138" placeholder="/*...*/" />
-              </folding>
+            <state line="106" column="113" selection-start="4841" selection-end="4841" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,10 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/xyz/redis/RedisDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xyz/redis/MessageDelegateListenerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-redis.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-redis.xml" />
         <option value="$PROJECT_DIR$/src/main/java/test/com/abin/lee/spring/redis/dao/impl/UserDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/framework/business/model/service/base/BaseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/framework/business/model/dao/privilege/ConfigDao.java" />
@@ -224,6 +297,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/framework/business/app/controller/ConfigController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/framework/business/model/dao/privilege/ConfigDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/framework/business/model/service/privilege/ConfigService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baobaotao/junit/OptionalTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baobaotao/junit/PreconditionsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baobaotao/junit/ObjectTest.java" />
       </list>
     </option>
   </component>
@@ -279,10 +356,10 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="1085" />
+    <option name="x" value="836" />
+    <option name="y" value="32" />
+    <option name="width" value="1437" />
+    <option name="height" value="1075" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -392,7 +469,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="privilege" />
+              <option name="myItemId" value="junit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,60 +495,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring3-demo" />
+              <option name="myItemId" value="junit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring3-demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="ObjectTest.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -506,6 +535,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.baobaotao.junit" />
       <recent name="org.framework.business.model.dao.privilege" />
       <recent name="com.xyz.redis" />
     </key>
@@ -517,42 +547,20 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat6">
-    <configuration default="false" name="RedisDAOImpl" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="JUnit.ObjectTest.compareTest">
+    <configuration default="false" name="OptionalTest.testMethodReturn" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.xyz.redis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.xyz.redis.RedisDAOImpl" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="spring" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserDaoTest.crud" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.abin.lee.spring.redis.dao.test.*" />
+          <option name="PATTERN" value="com.baobaotao.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="spring" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abin.lee.spring.redis.dao.test" />
-      <option name="MAIN_CLASS_NAME" value="com.abin.lee.spring.redis.dao.test.UserDaoTest" />
-      <option name="METHOD_NAME" value="crud" />
+      <option name="PACKAGE_NAME" value="com.baobaotao.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.baobaotao.junit.OptionalTest" />
+      <option name="METHOD_NAME" value="testMethodReturn" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -569,24 +577,22 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="UserDaoImplTest.crud" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="PreconditionsTest.Preconditions" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="test.com.abin.lee.spring.redis.dao.impl.*" />
+          <option name="PATTERN" value="com.baobaotao.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="spring" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.com.abin.lee.spring.redis.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="test.com.abin.lee.spring.redis.dao.impl.UserDaoImplTest" />
-      <option name="METHOD_NAME" value="crud" />
+      <option name="PACKAGE_NAME" value="com.baobaotao.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.baobaotao.junit.PreconditionsTest" />
+      <option name="METHOD_NAME" value="Preconditions" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -603,24 +609,22 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="TestRedis.testPublishMessage" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="ObjectTest.equalTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.xyz.redis.*" />
+          <option name="PATTERN" value="com.baobaotao.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="spring" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xyz.redis" />
-      <option name="MAIN_CLASS_NAME" value="com.xyz.redis.TestRedis" />
-      <option name="METHOD_NAME" value="testPublishMessage" />
+      <option name="PACKAGE_NAME" value="com.baobaotao.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.baobaotao.junit.ObjectTest" />
+      <option name="METHOD_NAME" value="equalTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -636,19 +640,47 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="TestRedis.main" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="ObjectTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.xyz.redis.*" />
+          <option name="PATTERN" value="com.baobaotao.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="spring" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xyz.redis" />
-      <option name="MAIN_CLASS_NAME" value="com.xyz.redis.TestRedis" />
-      <option name="METHOD_NAME" value="main" />
+      <option name="PACKAGE_NAME" value="com.baobaotao.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.baobaotao.junit.ObjectTest" />
+      <option name="METHOD_NAME" value="toStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ObjectTest.compareTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.baobaotao.junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.baobaotao.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.baobaotao.junit.ObjectTest" />
+      <option name="METHOD_NAME" value="compareTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -857,20 +889,20 @@
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Application.RedisDAOImpl" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserDaoTest.crud" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoImplTest.crud" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestRedis.testPublishMessage" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestRedis.main" />
-      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.Tomcat6" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat6" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.OptionalTest.testMethodReturn" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PreconditionsTest.Preconditions" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ObjectTest.equalTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ObjectTest.toStringTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ObjectTest.compareTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDaoTest.crud" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDaoImplTest.crud" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestRedis.testPublishMessage" />
-        <item index="3" class="java.lang.String" itemvalue="Application.RedisDAOImpl" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestRedis.main" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ObjectTest.compareTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ObjectTest.toStringTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ObjectTest.equalTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PreconditionsTest.Preconditions" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.OptionalTest.testMethodReturn" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -911,29 +943,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="836" y="32" width="1437" height="1075" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.433942" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46579805" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28893661" sideWeight="0.4975945" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24864277" sideWeight="0.4975945" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38802084" sideWeight="0.4975945" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29822618" sideWeight="0.4975945" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29752955" sideWeight="0.4975945" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09913454" sideWeight="0.7017738" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09861496" sideWeight="0.75080556" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.49720225" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2531856" sideWeight="0.566058" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3691796" sideWeight="0.4940048" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24115524" sideWeight="0.534202" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36807817" sideWeight="0.4940048" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1002,50 +1034,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/framework/business/model/service/privilege/ConfigServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="0" selection-start="5070" selection-end="5070" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/new.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="5534" selection-end="5591" vertical-scroll-proportion="0.52102375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add-user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="564" selection-end="705" vertical-scroll-proportion="0.026785715" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="4" selection-start="6947" selection-end="6947" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1392687806800" expanded="false" signature="6770:6917" placeholder="..." />
-          </folding>
+        <state line="166" column="4" selection-start="6949" selection-end="6949" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="71" selection-start="985" selection-end="985" vertical-scroll-proportion="0.74380165">
-          <folding />
-        </state>
+        <state line="24" column="71" selection-start="985" selection-end="985" vertical-scroll-proportion="0.74380165" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/config/step1.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="113" selection-start="4840" selection-end="4840" vertical-scroll-proportion="-17.333334">
-          <folding>
-            <marker date="1393832307389" expanded="true" signature="1678:3138" placeholder="/*...*/" />
-          </folding>
+        <state line="106" column="113" selection-start="4841" selection-end="4841" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,9 +1062,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xyz/redis/RedisDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.28546712">
-          <folding />
-        </state>
+        <state line="11" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.28546712" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abin/lee/spring/redis/dao/UserDao.java">
@@ -1094,9 +1096,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/framework/business/app/controller/ConfigController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="232" column="14" selection-start="9721" selection-end="9721" vertical-scroll-proportion="0.5893805">
-          <folding>
-            <element signature="e#6111#6127#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,7 +1109,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/framework/business/model/service/privilege/ConfigService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="904" selection-end="904" vertical-scroll-proportion="0.8450704">
+        <state line="32" column="12" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/OptionalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="93" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/PreconditionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="0" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1007#1016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baobaotao/junit/ObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="41" selection-start="5551" selection-end="5551" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="377" column="19" selection-start="11579" selection-end="11579" vertical-scroll-proportion="0.82608694">
           <folding />
         </state>
       </provider>
