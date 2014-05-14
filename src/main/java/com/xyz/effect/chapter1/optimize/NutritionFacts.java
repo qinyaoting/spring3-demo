@@ -62,4 +62,7 @@ public class NutritionFacts {
         carbohydrate = builder.carbohydrate;
     }
 
+    // 构建器不足：十分注重性能的情况下，可能有问题
+    // 如果类的构造器或静态工厂中有多个参数，设计这种类时，Builder模式是不错的选择
+
 }
