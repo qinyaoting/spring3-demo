@@ -1,4 +1,8 @@
-package com.xyz.design_pattern.chapter18;
+package com.xyz.design_pattern.chapter18.optimize2;
+
+
+import com.xyz.design_pattern.chapter18.optimize.Caretaker;
+import com.xyz.design_pattern.chapter18.optimize.Originator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,20 +26,15 @@ public class Test {
         lixiaoyao.stateDisplay();
 
         // 保存进度
-        GameRole backup = new GameRole();
-        backup.setVit(lixiaoyao.getVit());
-        backup.setAttack(lixiaoyao.getAttack());
-        backup.setDefense(lixiaoyao.getDefense());
+        RoleStateCaretaker stateAdmin = new RoleStateCaretaker();
+        stateAdmin.setMemonto(lixiaoyao.saveState());
 
         // 大战Boss，损耗严重，没血了
         lixiaoyao.fight();
         lixiaoyao.stateDisplay();
 
         // 恢复之前的状态
-        lixiaoyao.setVit(backup.getVit());
-        lixiaoyao.setAttack(backup.getAttack());
-        lixiaoyao.setDefense(backup.getDefense());
-
+        lixiaoyao.recoveryState(stateAdmin.getMemonto());
         lixiaoyao.stateDisplay();
     }
 

@@ -36,7 +36,7 @@ public class ColorPoint extends Point {
         if (o == null || o.getClass() != getClass())
             return false;
         Point p = (Point)o;
-        return p.x == x && p.y == y;
+        return false;//p.x == x && p.y == y;
 
         //======================================================
     }
