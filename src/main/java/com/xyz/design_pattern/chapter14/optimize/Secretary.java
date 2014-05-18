@@ -24,13 +24,18 @@ public class Secretary {
     }
 
     // 减少
-    public void notif() {
-        for(Observer so : observers) {
-            so.update();
-        }
+    public void detach(Observer observer) {
+        observers.remove(observer);
     }
 
     // 通知
+    public void notif() {
+        for(Observer ob : observers) {
+            ob.update();
+        }
+    }
+
+    // 前台状态
     public void secretartAction(String action) {
         this.action = action;
     }

@@ -10,6 +10,7 @@ package com.xyz.design_pattern.chapter14.optimize2;
 public class Test {
 
     public static final void main(String[] args) {
+
         Boss huhansan = new Boss();
         StockObserver1 tongshi1 = new StockObserver1("tom",huhansan);
         NBAObserver1 tongshi2 = new NBAObserver1("xiaoming",huhansan);
@@ -21,6 +22,14 @@ public class Test {
 
         huhansan.set("我呼喊三又回来了");
         huhansan.notif();
+
+        // 什么时候用观察者：当一个对象的改变需要同时改变其他对象时，
+        // 而且它不知道具体有多少对象有待改变，应考虑使用观察者模式
+
+        // 观察者模式所做的工作其实就是解除耦合，让耦合的双方都依赖与抽象，而不是具体类
+        // 从而是得各自的变化都不会影响另一边的变化
+
+
 
     }
 }
