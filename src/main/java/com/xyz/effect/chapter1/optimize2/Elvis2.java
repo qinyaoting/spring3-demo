@@ -13,4 +13,7 @@ public enum Elvis2 {
 
     INSTANCE;
 
+    // 无偿的提供了序列话机制，绝对防止多次实例化
+    // 单元素的枚举已经成了实现singleton的最佳方法
+
 }

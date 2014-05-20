@@ -42,6 +42,7 @@ public class Person {
         BOOM_END = gmtCal.getTime();
     }
 
+    // 改进后的方法
     public boolean isBabyBoomer2() {
         return birthDate.compareTo(BOOM_START) >= 0 &&
                 birthDate.compareTo(BOOM_END) < 0;
