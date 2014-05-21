@@ -10,7 +10,7 @@ package com.xyz.design_pattern.chapter23.optimize2;
 public class Test {
 
     public static final void main(String[] args) {
-        Barbecuer boy = new Barbecuer();
+        /*Barbecuer boy = new Barbecuer();
         Command bakeMuttonCommand1 = new BakeMuttonChickrenWindCommand(boy);
         Command bakeMuttonCommand2 = new BakeMuttonChickrenWindCommand(boy);
         Command bakeChickrenWindCommand1 = new BakeMuttonChickrenWindCommand(boy);
@@ -19,6 +19,6 @@ public class Test {
         girl.setOrder(bakeMuttonCommand1);
         girl.setOrder(bakeMuttonCommand2);
         girl.setOrder(bakeChickrenWindCommand1);
-        girl.notif();
+        girl.notif();*/
     }
 }
