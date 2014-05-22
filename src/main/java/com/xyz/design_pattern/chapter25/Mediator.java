@@ -9,5 +9,7 @@ package com.xyz.design_pattern.chapter25;
  */
 abstract class Mediator {
 
+    // [ˈmidiˌetɚ]  调停者；调解人；传递者；中介物
+
     public abstract void send(String message, Colleague colleague);
 }

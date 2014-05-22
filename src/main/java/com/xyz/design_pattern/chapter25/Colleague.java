@@ -9,6 +9,8 @@ package com.xyz.design_pattern.chapter25;
  */
 abstract class Colleague {
 
+    // [ˈkɑlˌiɡ]  同事；同僚；同行
+
     protected Mediator mediator;
 
     protected Colleague(Mediator mediator) {

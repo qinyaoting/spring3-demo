@@ -42,6 +42,8 @@ public class ConcreteMediator extends Mediator {
         c2.send("没有那，你打算请客？");
 
 
+        // 有了Mediator，使得ConcreteColleague1和ConcreteColleague2在发消息和接受消息时
+        //是通过中介来完成的，减少了他们的耦合度
 
 
     }
