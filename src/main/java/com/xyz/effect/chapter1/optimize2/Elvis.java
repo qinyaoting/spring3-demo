@@ -23,6 +23,8 @@ public class Elvis implements Serializable {
 
     //=========================================================
 
+
+    // 使用私有构造器或者枚举类型强化singleton属性
     private static final Elvis INSTANCE = new Elvis();
 
     private Elvis() {
