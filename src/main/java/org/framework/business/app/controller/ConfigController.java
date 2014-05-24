@@ -185,12 +185,12 @@ public class ConfigController {
         return "config/edit";
     }
 
-    @RequestMapping(value="/set.action",method=RequestMethod.GET)
+    @RequestMapping(value="/add.action",method=RequestMethod.GET)
     public String setConfig(@RequestParam(value = "name", required = true) String name, ModelMap modelMap){
         Map<String,String> apps = configService.getAppMap();
         modelMap.addAttribute("apps",apps);
         modelMap.addAttribute("currcfgid",name);
-        return "config/set";
+        return "config/add";
     }
 
     @RequestMapping(value = "/active.action", method = {RequestMethod.POST})
@@ -230,7 +230,7 @@ public class ConfigController {
             model.addAttribute("version",version);
             Map<String,String> apps = configService.getAppMap();
             model.addAttribute("apps",apps);
-            return  "config/set";
+            return  "config/add";
         }
 
     }

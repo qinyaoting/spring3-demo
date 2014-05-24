@@ -52,7 +52,7 @@ public class OptionalTest {
         Optional<Long> valueNoNull = methodNoNull();
         if(valueNoNull.isPresent()==true){
             Set<Long> set=valueNoNull.asSet();
-            System.out.println("获得返回值 set 的 size : " + set.size());
+            System.out.println("获得返回值 add 的 size : " + set.size());
             System.out.println("获得返回值: " + valueNoNull.get());
         }else{
             System.out.println("获得返回值: " + valueNoNull.or(-12L));

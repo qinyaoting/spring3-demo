@@ -9,6 +9,6 @@ package com.xyz.effect.chapter10.optimize;
  */
 public interface SetObserver<E> {
 
-    // Invoke when an element is added to the observable set
+    // Invoke when an element is added to the observable add
     void added(ObservableSet<E> set, E element);
 }

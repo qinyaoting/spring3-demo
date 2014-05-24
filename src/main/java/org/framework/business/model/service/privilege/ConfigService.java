@@ -22,7 +22,7 @@ public interface ConfigService extends BaseService {
 
     public static final String FORCE_SET = CONFIG_API + "forcedset";
 
-    public static final String SET = CONFIG_API + "set";
+    public static final String SET = CONFIG_API + "add";
 
     List<Config> getConfigList();
 

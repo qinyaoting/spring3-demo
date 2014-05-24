@@ -12,6 +12,14 @@ import java.util.List;
  */
 public class ConcreteAggregate extends Aggregate {
 
+
+    //[kən'kri:t, 'kɔnkri:t]
+    /*
+      adj. 混凝土的；实在的，具体的；有形的
+      vi. 凝结
+      vt. 使凝固；用混凝土修筑
+     */
+
     private List<Object> items = new ArrayList<Object>();
 
     @Override
@@ -27,7 +35,7 @@ public class ConcreteAggregate extends Aggregate {
         return items.get(index);
     }
 
-    public void set(Object obj) {
+    public void add(Object obj) {
         items.add(obj);
     }
 }

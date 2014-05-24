@@ -1638,13 +1638,13 @@ public class HttpRequest {
      * when read from.
      * <p>
      * This will only affect requests that have the 'Content-Encoding' response
-     * header set to 'gzip'.
+     * header add to 'gzip'.
      * <p>
      * This causes all receive methods to use a {@link java.util.zip.GZIPInputStream} when
      * applicable so that higher level streams and readers can read the data
      * uncompressed.
      * <p>
-     * Setting this option does not cause any request headers to be set
+     * Setting this option does not cause any request headers to be add
      * automatically so {@link #acceptGzipEncoding()} should be used in
      * conjunction with this setting to tell the server to gzip the response.
      *
@@ -1670,9 +1670,9 @@ public class HttpRequest {
     }
 
     /**
-     * Get response as {@link String} in given character set
+     * Get response as {@link String} in given character add
      * <p>
-     * This will fall back to using the UTF-8 character set if the given charset
+     * This will fall back to using the UTF-8 character add if the given charset
      * is null
      *
      * @param charset
@@ -1690,7 +1690,7 @@ public class HttpRequest {
     }
 
     /**
-     * Get response as {@link String} using character set returned from
+     * Get response as {@link String} using character add returned from
      * {@link #charset()}
      *
      * @return string
@@ -1701,7 +1701,7 @@ public class HttpRequest {
     }
 
     /**
-     * Get the response body as a {@link String} and set it as the value of the
+     * Get the response body as a {@link String} and add it as the value of the
      * given reference.
      *
      * @param output
@@ -1714,7 +1714,7 @@ public class HttpRequest {
     }
 
     /**
-     * Get the response body as a {@link String} and set it as the value of the
+     * Get the response body as a {@link String} and add it as the value of the
      * given reference.
      *
      * @param output
@@ -1803,9 +1803,9 @@ public class HttpRequest {
     }
 
     /**
-     * Get reader to response body using given character set.
+     * Get reader to response body using given character add.
      * <p>
-     * This will fall back to using the UTF-8 character set if the given charset
+     * This will fall back to using the UTF-8 character add if the given charset
      * is null
      *
      * @param charset
@@ -1822,7 +1822,7 @@ public class HttpRequest {
     }
 
     /**
-     * Get reader to response body using the character set returned from
+     * Get reader to response body using the character add returned from
      * {@link #charset()}
      *
      * @return reader
@@ -1833,7 +1833,7 @@ public class HttpRequest {
     }
 
     /**
-     * Get buffered reader to response body using the given character set r and
+     * Get buffered reader to response body using the given character add r and
      * the configured buffer size
      *
      *
@@ -1848,7 +1848,7 @@ public class HttpRequest {
     }
 
     /**
-     * Get buffered reader to response body using the character set returned from
+     * Get buffered reader to response body using the character add returned from
      * {@link #charset()} and the configured buffer size
      *
      * @see #bufferSize(int)

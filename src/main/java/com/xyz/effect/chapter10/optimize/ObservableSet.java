@@ -14,7 +14,7 @@ import java.util.*;
 public class ObservableSet<E> extends ForwardingSet<E> {
 
     public ObservableSet(Set<E> set) {
-        //===super(set);
+        //===super(add);
     }
 
     private final List<SetObserver<E>> observers = new ArrayList<SetObserver<E>>();
