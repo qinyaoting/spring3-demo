@@ -9,6 +9,7 @@ package com.xyz.design_pattern.chapter22.optimize3;
  */
 abstract class HandsetBrand {
 
+    // 手机品牌和手机软件是聚合关系，雁群和大雁关系，手机品牌包含有手机软件，但软件不一定是品牌的一部分
     protected HandsetSoft soft;
 
     public void setHandsetSoft(HandsetSoft soft) {
