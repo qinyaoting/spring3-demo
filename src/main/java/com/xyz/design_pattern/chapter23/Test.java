@@ -22,5 +22,7 @@ public class Test {
         boy.bakeMutton();
         boy.bakeMutton();
         boy.bakeChickenWing();
+
+        //需求多了，造成混乱，也不能取消
     }
 }

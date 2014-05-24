@@ -1,7 +1,5 @@
 package com.xyz.design_pattern.chapter23.optimize2;
 
-import com.xyz.design_pattern.chapter23.optimize.Barbecuer;
-
 /**
  * Created with IntelliJ IDEA.
  * User: vuclip123

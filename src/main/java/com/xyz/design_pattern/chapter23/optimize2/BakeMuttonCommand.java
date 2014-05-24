@@ -13,7 +13,7 @@ import com.xyz.design_pattern.chapter23.optimize.*;
 public class BakeMuttonCommand extends Command {
 
 
-    public BakeMuttonCommand(com.xyz.design_pattern.chapter23.optimize.Barbecuer receiver) {
+    public BakeMuttonCommand(Barbecuer receiver) {
         super(receiver);
     }
 

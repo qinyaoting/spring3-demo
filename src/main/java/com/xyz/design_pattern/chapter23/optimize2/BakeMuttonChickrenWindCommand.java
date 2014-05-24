@@ -1,7 +1,6 @@
 package com.xyz.design_pattern.chapter23.optimize2;
 
 
-import com.xyz.design_pattern.chapter23.optimize.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +12,7 @@ import com.xyz.design_pattern.chapter23.optimize.*;
 public class BakeMuttonChickrenWindCommand extends Command {
 
 
-    public BakeMuttonChickrenWindCommand(com.xyz.design_pattern.chapter23.optimize.Barbecuer receiver) {
+    public BakeMuttonChickrenWindCommand(Barbecuer receiver) {
         super(receiver);
     }
 
