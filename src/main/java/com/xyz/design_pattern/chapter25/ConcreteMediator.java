@@ -33,9 +33,12 @@ public class ConcreteMediator extends Mediator {
 
     public static final void main(String[] args) {
         ConcreteMediator m = new ConcreteMediator();
+
+        //让两个同事认识中介者
         ConcreteColleague1 c1 = new ConcreteColleague1(m);
         ConcreteColleague2 c2 = new ConcreteColleague2(m);
 
+        //让中介者认识两个同事
         m.setColleague1(c1);
         m.setColleague2(c2);
         c1.send("吃过饭了吗？");
@@ -43,7 +46,7 @@ public class ConcreteMediator extends Mediator {
 
 
         // 有了Mediator，使得ConcreteColleague1和ConcreteColleague2在发消息和接受消息时
-        //是通过中介来完成的，减少了他们的耦合度
+        // 是通过中介来完成的，减少了他们的耦合度
 
 
     }
