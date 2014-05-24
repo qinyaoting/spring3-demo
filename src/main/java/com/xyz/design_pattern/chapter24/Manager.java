@@ -39,6 +39,9 @@ public class Manager {
         }
     }
 
+    // 如果增加项目经理、部门经理、人力总监、副总经理，那就意味着要修改Manager这个类
+    // 这个类承担了太多的责任，这违背了单一职责原则，增加新的管理类别，需要修改这个类，违反了开放封闭原则
+
     public static final void main(String[] args) {
 
 
