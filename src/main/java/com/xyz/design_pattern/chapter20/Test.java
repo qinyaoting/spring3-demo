@@ -30,6 +30,5 @@ public class Test {
             System.out.println(i.currentItem() + " 请买票" );
             i.next();
         }
-
     }
 }
