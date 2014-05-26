@@ -10,7 +10,7 @@ import java.util.HashSet;
  * Time: 3:24 PM
  * To change this template use File | Settings | File Templates.
  */
-public class InstrumentedhashSet<E> extends HashSet {
+public class InstrumentedhashSet<E> extends HashSet<E> {
 
     private int addCount = 0;
 
@@ -20,7 +20,6 @@ public class InstrumentedhashSet<E> extends HashSet {
         super(initCap, loadFactor);
     }
 
-    /*@override
     public boolean add(E e) {
         addCount++;
         return super.add(e);
@@ -29,7 +28,7 @@ public class InstrumentedhashSet<E> extends HashSet {
     public boolean addAll(Collection<? extends E> c) {
         addCount += c.size();
         return super.addAll(c);
-    } */
+    }
 
     public int getAddCount() {
         return addCount;
