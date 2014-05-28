@@ -1,4 +1,4 @@
-package com.xyz.design_pattern_chapter19;
+package com.xyz.design_pattern.chapter19;
 
 import java.util.ArrayList;
 import java.util.List;

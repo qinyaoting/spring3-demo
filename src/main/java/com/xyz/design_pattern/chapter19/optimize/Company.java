@@ -1,4 +1,4 @@
-package com.xyz.design_pattern_chapter19.optimize;
+package com.xyz.design_pattern.chapter19.optimize;
 
 /**
  * Created with IntelliJ IDEA.
