@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter6;
+package com.xyz.effect.chapter6.num30;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,14 +13,17 @@ public enum  Plant {
 
     //对于大多数枚举类型都足够了
 
-    MERCURY(3.302e+23, 2.439e6),
-    VENUS(3.302e+23, 2.439e6),
-    EARTH(3.302e+23, 2.439e6),
-    MARS(3.302e+23, 2.439e6),
-    JUPITER(3.302e+23, 2.439e6),
-    SATURN(3.302e+23, 2.439e6),
-    URANUS(3.302e+23, 2.439e6),
-    NEPTUNE(3.302e+23, 2.439e6);
+    //太阳系中8颗行星，都有质量和半径， 通过这两个属性可以计算出它的表面重力
+    //从而给定物体的质量，就可以计算出一个物体在行星表面的重量
+
+    MERCURY     (3.302e+23, 2.439e6),
+    VENUS       (3.302e+23, 2.439e6),
+    EARTH       (3.302e+23, 2.439e6),
+    MARS        (3.302e+23, 2.439e6),
+    JUPITER     (3.302e+23, 2.439e6),
+    SATURN      (3.302e+23, 2.439e6),
+    URANUS      (3.302e+23, 2.439e6),
+    NEPTUNE     (3.302e+23, 2.439e6);
 
     private final double mass;               //In kilograms
     private final double radius;             //In meters

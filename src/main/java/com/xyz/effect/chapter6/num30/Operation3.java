@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter6;
+package com.xyz.effect.chapter6.num30;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,7 +36,7 @@ public enum Operation3 {
         double y = Double.parseDouble("222");
         for (Operation3 op : Operation3.values())
             System.out.printf("%f %s %f = %f%n",
-                                x, op, y, op.apply(x,y));
+                                x, op, y, op.apply(x, y));
 
     }
 }

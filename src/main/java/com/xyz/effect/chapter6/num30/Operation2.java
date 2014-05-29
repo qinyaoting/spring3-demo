@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter6;
+package com.xyz.effect.chapter6.num30;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,5 +19,6 @@ public enum Operation2 {
 
     public static final void main(String[] args) {
 
+        System.out.print(Operation2.DIVIDE.apply(111,222));
     }
 }
