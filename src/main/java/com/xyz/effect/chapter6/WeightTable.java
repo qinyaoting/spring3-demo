@@ -11,8 +11,10 @@ public class WeightTable {
 
     public static final void main(String[] args) {
         double earthWeight = Double.parseDouble(args[0]);
-        double mass = earthWeight / Plant.EARTH.getSurfaceGravity();
+        double mass = earthWeight / Plant.EARTH.surfaceGravity();
+        // values 返回
         for (Plant p : Plant.values())
             System.out.printf("Weight on %s is %f%n",p,p.surfaceWeight(mass));
+        // printf
     }
 }
