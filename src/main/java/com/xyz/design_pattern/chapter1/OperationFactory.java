@@ -9,19 +9,21 @@ package com.xyz.design_pattern.chapter1;
  */
 public class OperationFactory {
 
-    public static Operation createOperate(int operate) {
+    enum Operate{ADD, SUB, MUL, DIV};
+
+    public static Operation createOperate(Operate op) {
         Operation oper = null;
-        switch (operate) {
-            case 1:
+        switch (op) {
+            case ADD:
                 oper = new OperationAdd();
             break;
-            case 2:
+            case SUB:
                 oper = new OperationSub();
                 break;
-            case 3:
+            case MUL:
                 oper = new OperationMul();
                 break;
-            case 4:
+            case DIV:
                 oper = new OperationDiv();
                 break;
         }
@@ -29,13 +31,13 @@ public class OperationFactory {
     }
 
     public static final void main(String[] args) {
-        Operation op = OperationFactory.createOperate(1);
+        Operation op = OperationFactory.createOperate(Operate.ADD);
         op.setNumberA(111);
         op.setNumberB(222);
         double result = op.getResult();
         System.out.println(result);
 
-        Operation op2 = OperationFactory.createOperate(2);
+        Operation op2 = OperationFactory.createOperate(Operate.SUB);
         op2.setNumberA(111);
         op2.setNumberB(222);
         double result2 = op2.getResult();
