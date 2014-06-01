@@ -7,6 +7,8 @@ package com.xyz.effect.chapter6.num31;
  * Time: 3:36 PM
  * To change this template use File | Settings | File Templates.
  */
+
+// Abuse of ordinal to derive an associated value , don't do this
 public enum  Ensemble {      // [ɑnˈsɑmb(ə)l]合奏
 
     SOLO, DUET, TRIO, QUARTET, QUINTET,
@@ -14,8 +16,10 @@ public enum  Ensemble {      // [ɑnˈsɑmb(ə)l]合奏
 
     public int numberOfMusicians() {return ordinal() + 1;}
 
+    //ordinal() 方法返回序列
+
 
     public static final void main(String[] args) {
-        Ensemble.SOLO.numberOfMusicians();
+        System.out.print(Ensemble.DECTET.numberOfMusicians());
     }
 }
