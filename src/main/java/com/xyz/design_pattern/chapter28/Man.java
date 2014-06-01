@@ -12,6 +12,8 @@ public class Man extends Person {
 
     @Override
     public void getConclusion() {
+
+
         if (action.equals("成功")) {
             System.out.println(this.getClass().getName() + " " + action + " ，背后多半有一个伟大的女人");
         } else if (action.equals("失败")) {
