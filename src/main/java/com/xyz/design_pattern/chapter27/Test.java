@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Test {
 
-    //解释器模式：interpreter
+    //解释器模式：interpreter  [ɪnˈtəprɪtɚ]
 
     public static final void main(String[] args) {
         Context context = new Context();

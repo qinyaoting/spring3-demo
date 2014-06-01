@@ -16,8 +16,12 @@ abstract class Expression {
             String playKey = context.playText().substring(0,1);
             context.setText(context.playText().substring(2));
 
-            //double playValue = context.playText().substring()
+            double playValue = 11;//context.playText().substring();
+
+            excute(playKey,playValue);
 
         }
     }
+
+    public abstract void excute(String key, double value);
 }
