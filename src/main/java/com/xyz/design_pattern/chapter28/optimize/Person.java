@@ -9,5 +9,6 @@ package com.xyz.design_pattern.chapter28.optimize;
  */
 abstract class Person {
 
+    // 用来获得 '状态' 对象的
     public abstract void accept(Action visitor);
 }
