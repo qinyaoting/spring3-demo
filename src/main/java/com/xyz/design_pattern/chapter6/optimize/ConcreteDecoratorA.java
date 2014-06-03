@@ -14,7 +14,7 @@ public class ConcreteDecoratorA extends Decorator {
 
     @Override
     public void operation() {
-       super.operation();        //先运行component的operation方法，在执行
+       super.operation();        //先运行component的operation方法，在执行本类的功能，相当与对原有的Component进行了装饰
         addedState = "New state";
         System.out.println("具体对象A的操作");
     }

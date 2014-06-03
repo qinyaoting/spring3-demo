@@ -7,13 +7,12 @@ package com.xyz.design_pattern.chapter6.optimize;
  * Time: 11:06 AM
  * To change this template use File | Settings | File Templates.
  */
-abstract class Decorator extends Component {
 
+//抽象类
+abstract class Decorator extends Component {  //继承了Component
+
+    //一个Component属性
     protected Component component;
-
-    public Component getComponent() {
-        return component;
-    }
 
     //设置component
     public void setComponent(Component component) {

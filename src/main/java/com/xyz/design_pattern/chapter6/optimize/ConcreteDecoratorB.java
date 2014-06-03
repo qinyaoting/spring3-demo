@@ -9,8 +9,6 @@ package com.xyz.design_pattern.chapter6.optimize;
  */
 public class ConcreteDecoratorB extends Decorator {
 
-    private String addedState;
-
     @Override
     public void operation() {
        super.operation();

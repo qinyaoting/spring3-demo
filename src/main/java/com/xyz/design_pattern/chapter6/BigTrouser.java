@@ -26,6 +26,8 @@ public class BigTrouser extends Finery {
         pqx.show();
         cx.show();
 
+        //这比较恶心，一条一条的写
+
         Finery xz = new Suit();
         Finery ld = new Tie();
         Finery px = new LeatherShoes();
