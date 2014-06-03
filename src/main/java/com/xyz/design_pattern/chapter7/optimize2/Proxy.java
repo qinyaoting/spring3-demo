@@ -26,4 +26,7 @@ public class Proxy extends Subject {
         Proxy proxy = new Proxy();
         proxy.request();
     }
+
+    // 代理模式应用场合：
+    //
 }
