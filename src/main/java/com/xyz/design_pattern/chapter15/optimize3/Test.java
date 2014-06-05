@@ -26,6 +26,6 @@ public class Test {
         id.insert(dept);
         id.getDepartment(1);
 
-        // .net 反射
+        // .net 反射可以改进简单工厂方法的问题
     }
 }

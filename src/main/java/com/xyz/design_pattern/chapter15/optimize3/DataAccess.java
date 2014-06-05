@@ -16,6 +16,8 @@ public class DataAccess {
     private static final int db = 1;        //Sqlserver
     //private static final int db = 2;     //Access
 
+
+    // 简单工厂方法
     public static IUser createUser() {
         IUser result = null;
         switch (db) {
