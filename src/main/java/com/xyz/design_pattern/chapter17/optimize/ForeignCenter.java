@@ -23,7 +23,7 @@ public class ForeignCenter {
         System.out.println("外籍中锋:" + name + "进攻@");
     }
 
-    public void fengshou() {
+    public void fangshou() {
         System.out.println("外籍中锋:" + name + "回防@");
     }
 
