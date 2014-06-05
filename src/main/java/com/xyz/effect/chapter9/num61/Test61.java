@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter9;
+package com.xyz.effect.chapter9.num61;
 
 /**
  * Created with IntelliJ IDEA.
