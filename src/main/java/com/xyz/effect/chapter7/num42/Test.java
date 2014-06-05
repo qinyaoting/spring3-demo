@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter42.num42;
+package com.xyz.effect.chapter7.num42;
 
 import java.util.Arrays;
 import java.util.List;
