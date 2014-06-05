@@ -9,14 +9,12 @@ package com.xyz.design_pattern.chapter16;
  */
 public class Context {
 
+
+    //里边有个State属性
     private State state;
 
-    public Context(State state) {
+    public Context(State state) { //传进来
         this.state = state;
-    }
-
-    public State getState() {
-        return state;
     }
 
     public void setState(State state) {
@@ -24,6 +22,6 @@ public class Context {
     }
 
     public void request() {
-        state.handle(this);
+        state.handle(this);  //将执行ConcreteStateA对象中的handle方法
     }
 }
