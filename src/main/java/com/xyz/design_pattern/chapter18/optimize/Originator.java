@@ -7,6 +7,8 @@ package com.xyz.design_pattern.chapter18.optimize;
  * Time: 5:14 PM
  * To change this template use File | Settings | File Templates.
  */
+
+// 发起人类
 public class Originator {
 
     private String state;
@@ -19,7 +21,7 @@ public class Originator {
         this.state = state;
     }
 
-    public Memento createMemento() {
+    public Memento createMemento() {   //创建备忘录，将当前要保存的信息导入并实例化一个对象
         return  new Memento(state);
     }
 

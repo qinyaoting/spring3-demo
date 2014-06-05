@@ -23,7 +23,7 @@ public class Test {
 
         // 保存进度
         GameRole backup = new GameRole();
-        backup.setVit(lixiaoyao.getVit());
+        backup.setVit(lixiaoyao.getVitality());     //暴露了实现细节，不足取
         backup.setAttack(lixiaoyao.getAttack());
         backup.setDefense(lixiaoyao.getDefense());
 
@@ -32,7 +32,7 @@ public class Test {
         lixiaoyao.stateDisplay();
 
         // 恢复之前的状态
-        lixiaoyao.setVit(backup.getVit());
+        lixiaoyao.setVit(backup.getVitality());       //同样暴露了实现细节，不足取
         lixiaoyao.setAttack(backup.getAttack());
         lixiaoyao.setDefense(backup.getDefense());
 

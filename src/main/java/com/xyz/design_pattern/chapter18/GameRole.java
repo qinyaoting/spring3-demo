@@ -9,9 +9,9 @@ package com.xyz.design_pattern.chapter18;
  */
 public class GameRole {
 
-    private int vit;
+    private int vit;                //n.活力； 生气； 生命力； 持久性
 
-    public int getVit() {
+    public int getVitality() {
         return vit;
     }
 

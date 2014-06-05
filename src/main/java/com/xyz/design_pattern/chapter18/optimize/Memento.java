@@ -7,6 +7,8 @@ package com.xyz.design_pattern.chapter18.optimize;
  * Time: 5:15 PM
  * To change this template use File | Settings | File Templates.
  */
+
+// 备忘录类
 public class Memento {
 
 
