@@ -14,7 +14,7 @@ abstract class Observer {
     protected String name;
     protected Subject sub;
 
-    public Observer(String name, Subject sub) {
+    public Observer(String name, Subject sub) { //前台类改成抽象通知者
         this.name = name;
         this.sub = sub;
     }
