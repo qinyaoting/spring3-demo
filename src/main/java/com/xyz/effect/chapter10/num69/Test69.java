@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter10.optimize.optimize2;
+package com.xyz.effect.chapter10.num69;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

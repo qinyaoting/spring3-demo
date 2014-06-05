@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter10.optimize;
+package com.xyz.effect.chapter10.num68;
 
 import com.google.common.collect.ForwardingSet;
 

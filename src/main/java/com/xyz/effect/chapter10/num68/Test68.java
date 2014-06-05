@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter10.optimize;
+package com.xyz.effect.chapter10.num68;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,9 +7,9 @@ package com.xyz.effect.chapter10.optimize;
  * Time: 1:37 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Test67 {
+public class Test68 {
 
-    // 66避免过度同步
+    // 68executor和task优先与线程
 
 
 

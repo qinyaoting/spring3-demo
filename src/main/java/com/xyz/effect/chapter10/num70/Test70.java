@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter10.optimize.optimize2;
+package com.xyz.effect.chapter10.num70;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +7,7 @@ package com.xyz.effect.chapter10.optimize.optimize2;
  * Time: 3:27 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Test71 {
+public class Test70 {
 
-    //慎用延迟初始化
+    //线程安全性的文档化
 }
