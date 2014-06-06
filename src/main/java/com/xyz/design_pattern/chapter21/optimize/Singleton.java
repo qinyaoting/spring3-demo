@@ -21,4 +21,16 @@ public class Singleton {
         }
         return instance;
     }
+
+
+    // 双重锁定
+    public static Singleton getInstance2() {
+        if (instance == null){
+            synchronized (syncRoot) {
+                if (instance == null)
+                    instance = new Singleton();
+            }
+        }
+        return instance;
+    }
 }
