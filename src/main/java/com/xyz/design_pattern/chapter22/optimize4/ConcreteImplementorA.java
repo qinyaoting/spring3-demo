@@ -10,6 +10,6 @@ package com.xyz.design_pattern.chapter22.optimize4;
 public class ConcreteImplementorA extends Implementor {
     @Override
     public void operation() {
-        System.out.println("运行具体对象的方法");
+        System.out.println("运行实现A的方法执行");
     }
 }

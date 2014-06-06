@@ -15,7 +15,7 @@ public class Test {
         ab.setImplementor(new ConcreteImplementorA());
         ab.opertion();
 
-        ab.setImplementor(new ConcreteImplementorA());
+        ab.setImplementor(new ConcreteImplementorB());
         ab.opertion();
     }
 
