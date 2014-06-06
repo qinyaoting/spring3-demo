@@ -27,7 +27,7 @@ public class FinanceDepartment extends Company {
     public void display(int depth) {
         //To change body of implemented methods use File | Settings | File Templates.
         for (int i=0;i<depth;i++)
-            System.out.print("--");
+            System.out.print("-");
         System.out.println(name);
     }
 

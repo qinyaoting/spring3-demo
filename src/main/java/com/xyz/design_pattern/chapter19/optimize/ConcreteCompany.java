@@ -35,6 +35,7 @@ public class ConcreteCompany extends Company {
     public void display(int depth) {
         for (int i=0;i<depth;i++)
             System.out.print("-");
+        System.out.println(name);
 
         for (Company c: children) {
             c.display(depth + 2);

@@ -7,7 +7,7 @@ package com.xyz.design_pattern.chapter19;
  * Time: 5:49 PM
  * To change this template use File | Settings | File Templates.
  */
-abstract   class Component {
+abstract class Component {
 
     protected String name;
 

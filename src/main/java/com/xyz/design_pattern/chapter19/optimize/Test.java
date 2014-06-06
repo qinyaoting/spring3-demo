@@ -10,6 +10,8 @@ package com.xyz.design_pattern.chapter19.optimize;
 public class Test {
 
     public static final void main(String[] args) {
+
+
         ConcreteCompany root = new ConcreteCompany("北京总公司");
         root.add(new HRDepartment("总公司人力资源"));
         root.add(new FinanceDepartment("总公司财务部"));

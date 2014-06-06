@@ -20,9 +20,9 @@ public class Test {
 
         root.add(comp);
 
-        Composite comp2 = new Composite("composite XY");
-        comp2.add(new Leaf("Leaf XYA"));
-        comp2.add(new Leaf("Leaf XYB"));
+        Composite comp2 = new Composite("composite Y");
+        comp2.add(new Leaf("Leaf YA"));
+        comp2.add(new Leaf("Leaf YB"));
 
         root.add(comp2);
 
@@ -33,6 +33,10 @@ public class Test {
         root.remove(leaf);
 
         root.display(1);
+
+        //什么时候使用组合模式
+        //需求中是体现部分与整体层次的结构时，你希望用户可以忽略组合对象与单个对象的不同
+        // 统一的使用组合结构中的所有对象时，
 
     }
 }

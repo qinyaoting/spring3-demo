@@ -12,6 +12,13 @@ import java.util.List;
  */
 public class Composite extends Component {
 
+    //[kəmˈpɑzɪt]
+
+    /*
+    adj.混合成的，综合成的；[建]综合式的；[数]可分解的；[植]菊科的
+    n. 合成物，混合物，复合材料；[植]菊科植物
+     */
+
     private List<Component> children = new ArrayList<Component>();
     protected Composite(String name) {
         super(name);
@@ -29,8 +36,8 @@ public class Composite extends Component {
 
     @Override
     public void display(int depth) {
-        for(Component c: children) {
-            System.out.println(depth + 2);
+        for(Component component: children) {
+            component.display(depth + 2);
         }
     }
 }
