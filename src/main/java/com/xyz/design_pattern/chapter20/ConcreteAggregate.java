@@ -20,6 +20,7 @@ public class ConcreteAggregate extends Aggregate {
       vt. 使凝固；用混凝土修筑
      */
 
+    //集合
     private List<Object> items = new ArrayList<Object>();
 
     @Override

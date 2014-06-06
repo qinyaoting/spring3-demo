@@ -7,9 +7,11 @@ package com.xyz.design_pattern.chapter20;
  * Time: 3:49 PM
  * To change this template use File | Settings | File Templates.
  */
+
+//抽象类
 abstract class Iterator {
 
-    public abstract Object first();
+    public abstract Object first();    //声明四个方法
     public abstract Object next();
     public abstract boolean isDone();
     public abstract Object currentItem();

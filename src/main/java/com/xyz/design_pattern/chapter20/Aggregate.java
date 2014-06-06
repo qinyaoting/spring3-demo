@@ -9,7 +9,7 @@ package com.xyz.design_pattern.chapter20;
  */
 
 // 聚集抽象类
-abstract class Aggregate {
+abstract class Aggregate {  //[ˈæɡrɪɡɪt   n.合计；聚集体；骨料；集料
 
 
     // 创建迭代器

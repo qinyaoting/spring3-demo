@@ -15,6 +15,8 @@ public class Test {
     // 需要对象聚合对象有多种方式遍历时，考虑使用
 
     public static final void main(String[] args) {
+
+
         ConcreteAggregate a = new ConcreteAggregate();
 
         a.add("大鸟");
