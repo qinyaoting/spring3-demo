@@ -2,12 +2,12 @@ package com.xyz.effect.chapter10.num67;
 
 /**
  * Created with IntelliJ IDEA.
- * User: vuclip123
- * Date: 6/5/14
- * Time: 2:14 PM
+ * User: qinyaoting
+ * Date: 6/10/14
+ * Time: 9:35 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Test {
+public interface SetObserver<E> {
 
-    //避免过度同步
+    void add(ObservableSet<E> set, E element);
 }
