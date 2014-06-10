@@ -11,7 +11,7 @@ import java.util.EmptyStackException;
  */
 public class Test64 {
 
-    // 努力是失败保持原子性
+    // 努力使失败保持原子性
 
     private int size;
     private String[] elements;

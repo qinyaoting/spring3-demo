@@ -104,7 +104,7 @@ public class StopThread {
         return nextSeriaNumber++;   //多个线程执行，这里会有问题
     }
 
-    //====
+    //====改正方法删除 volatile 增加synchronized关键字
 
     private static int nextSeriaNumber2 = 0;
 
@@ -112,6 +112,7 @@ public class StopThread {
         return nextSeriaNumber++;
     }
 
+    // 最好的办法
     private static final AtomicLong nextSerialNum = new AtomicLong();
     public static long generateSerialNumber3() {
      return nextSerialNum.getAndIncrement();
