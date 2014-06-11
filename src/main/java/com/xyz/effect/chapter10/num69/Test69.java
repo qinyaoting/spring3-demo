@@ -23,12 +23,15 @@ public class Test69 {
     private static final ConcurrentMap<String, String> map = new ConcurrentHashMap<String,String>();
 
     public static String intern(String s){
+
+        //返回与键关联的前一个值
         String previousValue = map.putIfAbsent(s,s);
-        return previousValue == null?s : previousValue;
+        return previousValue == null? s : previousValue;
     }
 
     //更好的
     public static String intern2(String s){
+        //先检查是否存在
         String result = map.get(s);
         if (result == null) {
             result = map.putIfAbsent(s,s);
