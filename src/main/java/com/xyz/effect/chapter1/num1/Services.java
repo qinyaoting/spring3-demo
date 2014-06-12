@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter1;
+package com.xyz.effect.chapter1.num1;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -37,15 +37,6 @@ public class Services {
         return p.newService();
     }
 
-    // 静态工厂方法的优势在于，在创建参数化实例的时候，他们使得代码更加简洁
 
-    //缺点1 类如果不含公有的或者受保护的构造器，就不能被子类化
-    //缺点2
 
-    // valueOf
-    // of
-    // getInstance
-    // newInstance
-    // getType
-    // newType
 }

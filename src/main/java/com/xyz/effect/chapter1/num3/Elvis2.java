@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter1.optimize2;
+package com.xyz.effect.chapter1.num3;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +11,7 @@ public enum Elvis2 {
 
 
 
+    // 第三种 1.5 以后，实现Singleton 最方便的方法
     INSTANCE;
 
     // 无偿的提供了序列话机制，绝对防止多次实例化

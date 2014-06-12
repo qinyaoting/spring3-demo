@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter1.optimize2;
+package com.xyz.effect.chapter1.num3;
 
 import java.io.Serializable;
 
@@ -11,7 +11,10 @@ import java.io.Serializable;
  */
 public class Elvis implements Serializable {
 
+    // 使用私有构造器或者枚举类型强化singleton属性
 
+
+    //第一种 构造器私有 静态共有final方法，返回唯一对象
     /*public static final Elvis INSTANCE = new Elvis();
 
     private Elvis() {
@@ -24,13 +27,13 @@ public class Elvis implements Serializable {
     //=========================================================
 
 
-    // 使用私有构造器或者枚举类型强化singleton属性
+    //第二种 构造器私有 静态共有方法，返回对象引用
     private static final Elvis INSTANCE = new Elvis();
 
     private Elvis() {
     }
 
-    public static Elvis getInstance() {
+    public static Elvis getInstance() {     //方便扩展，可以返回不是单实例的
         return INSTANCE;
     }
 
@@ -42,7 +45,7 @@ public class Elvis implements Serializable {
         // 都会返回同一个对象
     }
 
-
+    // 方式反实例化时，创建多个实例，第一 implements Serializable 第二 增加下列方法
     private Object readResolve() {
         return INSTANCE;
     }

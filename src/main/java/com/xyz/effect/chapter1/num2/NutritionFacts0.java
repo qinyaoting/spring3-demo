@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter1;
+package com.xyz.effect.chapter1.num2;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +7,11 @@ package com.xyz.effect.chapter1;
  * Time: 2:37 PM
  * To change this template use File | Settings | File Templates.
  */
-public class NutritionFacts {
+public class NutritionFacts0 {
+
+
+
+    // 遇到多个构造器参数时，考虑用构建器
 
     private final int servingSize;  //(ml)                  required
     private final int servings;     //(per container)       required
@@ -16,24 +20,24 @@ public class NutritionFacts {
     private final int sodium;       // (mg)                 optional
     private final int carbohydrate; // (g)            optional
 
-    public NutritionFacts(int servingSize, int servings) {
+    public NutritionFacts0(int servingSize, int servings) {
         this(servingSize, servings, 0);
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories) {
+    public NutritionFacts0(int servingSize, int servings, int calories) {
         this(servingSize, servings, calories, 0);
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat) {
+    public NutritionFacts0(int servingSize, int servings, int calories, int fat) {
         this(servingSize, servings, calories, fat, 0);
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium) {
+    public NutritionFacts0(int servingSize, int servings, int calories, int fat, int sodium) {
         this(servingSize, servings, calories, fat, sodium, 0);
     }
 
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
+    public NutritionFacts0(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
         this.servingSize = servingSize;
         this.servings = servings;
         this.calories = calories;
