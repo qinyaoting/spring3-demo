@@ -33,5 +33,11 @@ public class Test {
         System.out.println(s.equals(cis));
     }
 
+    // 当编写完equals方法后，应该问自己三个问题：他是否对称的，传递的，一致的
+    // 覆盖equals时总要覆盖hashCode
+    // 不要其他让equals方法过于智能
+    // 1
+
+
 
 }

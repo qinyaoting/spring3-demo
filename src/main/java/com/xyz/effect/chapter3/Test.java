@@ -1,5 +1,7 @@
 package com.xyz.effect.chapter3;
 
+import com.xyz.effect.chapter3.num8.ColorPoint;
+
 import java.awt.*;
 
 /**
@@ -12,7 +14,7 @@ import java.awt.*;
 public class Test {
 
     public static final void  main(String[] args) {
-        Point p = new Point(1, 2);
+        com.xyz.effect.chapter3.num8.Point p = new com.xyz.effect.chapter3.num8.Point(1, 2);
         ColorPoint cp = new ColorPoint(1 ,2, Color.RED);
 
 
