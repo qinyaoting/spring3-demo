@@ -1,10 +1,10 @@
-package com.xyz.effect.chapter1.num3;
+package com.xyz.effect.chapter2.num5;
 
 /**
  * Created with IntelliJ IDEA.
  * User: vuclip123
- * Date: 5/14/14
- * Time: 3:51 PM
+ * Date: 6/12/14
+ * Time: 11:19 AM
  * To change this template use File | Settings | File Templates.
  */
 public class Test {
@@ -13,7 +13,6 @@ public class Test {
     // String s = new String("stringgette"); 千万别这么做，这回创建许多对象
 
     String s = "stringgette";   //同一台虚拟机中，重用不可变对象
-
 
     //=====================================================
 
@@ -32,7 +31,5 @@ public class Test {
         // 优先使用基本类型而不是装箱基本类型，当心无意识的自动装箱
     }
 
-   // 6 避免使用终结方法
-    //
 
 }

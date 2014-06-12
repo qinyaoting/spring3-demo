@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter1.num2;
+package com.xyz.effect.chapter2.num2;
 
 
 /**
