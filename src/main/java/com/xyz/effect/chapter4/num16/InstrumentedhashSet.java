@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter4;
+package com.xyz.effect.chapter4.num16;
 
 import java.util.Collection;
 import java.util.HashSet;

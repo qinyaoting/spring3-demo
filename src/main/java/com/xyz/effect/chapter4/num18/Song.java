@@ -1,6 +1,4 @@
-package com.xyz.effect.chapter4.optimize;
-
-import java.applet.AudioClip;
+package com.xyz.effect.chapter4.num18;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,7 +7,5 @@ import java.applet.AudioClip;
  * Time: 9:05 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface Singer {
-
-    AudioClip sing(Song s);
+public class Song {
 }

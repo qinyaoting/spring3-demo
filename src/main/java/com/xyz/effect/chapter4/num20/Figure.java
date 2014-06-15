@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter4.optimize4;
+package com.xyz.effect.chapter4.num20;
 
 /**
  * Created with IntelliJ IDEA.

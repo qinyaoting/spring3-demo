@@ -26,4 +26,8 @@ public class Test15 {
     public static final Complex I = new Complex(0,1);
 
     // 进一步扩展，不可变的类可以提供一些静态工厂，吧频繁请求的实例缓存起来,
+
+    // 不可变对象可被自由的共享，所以永远不需要进行保护性拷贝，不应该为不可变类提供clone方法或拷贝构造器
+
+
 }

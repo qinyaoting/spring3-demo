@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter4;
+package com.xyz.effect.chapter4.num16;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,6 +10,7 @@ package com.xyz.effect.chapter4;
 public class Test16 {
 
     //16复合优先于继承
+
     //与方法调用不同的是，继承打破了封装性。子类依赖与其超类中特定功能的实现，超类的实现可能随着发行版本的不同而有变化
     //子类可以会遭到破坏，即使他的代码完全没有改变
 

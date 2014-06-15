@@ -1,4 +1,4 @@
-package com.xyz.effect.chapter4.optimize2;
+package com.xyz.effect.chapter4.num18;
 
 import java.util.Map;
 
@@ -12,21 +12,40 @@ import java.util.Map;
 public abstract class AbstractMapEntry<K,V> implements Map.Entry {
 
 
+    public abstract K getKey();
+    public abstract V getValue();
 
+    /*public V setValue(V value) {
+        throw new UnsupportedOperationException();
+    }*/
+
+
+    // Implements the general contract of Map.Entry.equals
     @Override
-    public Object getKey() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Map.Entry))
+            return false;
+        Map.Entry<?,?> arg = (Map.Entry) o;
+        return equals(getKey() , arg.getKey()) &&
+                equals(getValue(), arg.getValue());
     }
 
-    @Override
-    public Object getValue() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    private static boolean equals(Object o1, Object o2) {
+        return o1 == null? o2 == null : o1.equals(o2);
     }
 
-    @Override
-    public Object setValue(Object o) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+   /* @Override
+    public int hashCode() {
+        return hashCode(getKey() ^ hashCode(getValue()));
     }
+
+    private static int hashCode(Object obj) {
+        return obj == null ? 0: obj.hashCode();
+    }*/
+
+
 
     //抽象类在后续的版本中，增加新的方法，比较方便
     //接口这样是不行的
