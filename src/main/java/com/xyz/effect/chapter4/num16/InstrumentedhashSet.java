@@ -10,13 +10,13 @@ import java.util.HashSet;
  * Time: 3:24 PM
  * To change this template use File | Settings | File Templates.
  */
-public class InstrumentedhashSet<E> extends HashSet<E> {
+public class InstrumentedHashSet<E> extends HashSet<E> {
 
     private int addCount = 0;
 
-    public InstrumentedhashSet(){}
+    public InstrumentedHashSet(){}
 
-    public InstrumentedhashSet(int initCap, float loadFactor) {
+    public InstrumentedHashSet(int initCap, float loadFactor) {
         super(initCap, loadFactor);
     }
 
