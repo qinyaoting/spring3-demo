@@ -10,7 +10,7 @@ import java.util.HashSet;
  * Time: 3:24 PM
  * To change this template use File | Settings | File Templates.
  */
-public class InstrumentedHashSet<E> extends HashSet<E> {
+class InstrumentedHashSet<E> extends HashSet<E> {
 
     private int addCount = 0;
 
