@@ -30,7 +30,7 @@ public class ConcreteDecoratorB extends Decorator {
     // 当需要执行特殊行为时，客户端代码就可以在运行时根据需要选择 或按顺序装饰功能包装对象1
 
 
-
+    // 20141125
     public static final void main(String[] args) {
         ConcreteComponent c = new ConcreteComponent();
         ConcreteDecoratorA d1 = new ConcreteDecoratorA();
