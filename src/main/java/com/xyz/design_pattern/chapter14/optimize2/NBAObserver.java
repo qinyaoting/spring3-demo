@@ -7,15 +7,16 @@ package com.xyz.design_pattern.chapter14.optimize2;
  * Time: 4:33 PM
  * To change this template use File | Settings | File Templates.
  */
-public class NBAObserver1 extends  Observer {
+public class NBAObserver extends  Observer {
 
 
-    public NBAObserver1(String name, Subject sub) {
+    public NBAObserver(String name, Subject sub) {
         super(name, sub);
     }
 
     @Override
     public void update() {
+
         System.out.println(name + ":" + sub.get() + "关闭NBA，继续工作");
     }
 }

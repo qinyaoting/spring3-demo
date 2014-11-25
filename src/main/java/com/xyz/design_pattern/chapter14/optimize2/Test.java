@@ -11,9 +11,9 @@ public class Test {
 
     public static final void main(String[] args) {
 
-        Boss huhansan = new Boss();
-        StockObserver1 tongshi1 = new StockObserver1("tom",huhansan);
-        NBAObserver1 tongshi2 = new NBAObserver1("xiaoming",huhansan);
+        Subject huhansan = new Boss();
+        StockObserver tongshi1 = new StockObserver("tom",huhansan);
+        NBAObserver tongshi2 = new NBAObserver("xiaoming",huhansan);
 
         huhansan.attach(tongshi1);
         huhansan.attach(tongshi2);

@@ -25,7 +25,7 @@ public class Secretary {
         }
     }
 
-    public void secretartAction(String action) {
+    public void secretaryAction(String action) {
         this.action = action;
     }
 

@@ -17,7 +17,7 @@ public class Test {
         tongzizhe.attach(tongshi1);
         tongzizhe.attach(tongshi2);
 
-        tongzizhe.secretartAction("老板回来了!!!");
+        tongzizhe.secretaryAction("老板回来了!!!");
         tongzizhe.notif();
 
         // 问题：前台类和股票类相互耦合，前台类要增加观察者，观察者要获得前台的状态

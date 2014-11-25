@@ -17,6 +17,7 @@ public class NBAObserver extends Observer {
 
     @Override
     public void update() {
+
         System.out.println(name + ":" + sub.getAction() + "关闭NBA直播，继续工作");
     }
 }
