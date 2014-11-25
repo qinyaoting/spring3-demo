@@ -18,6 +18,7 @@ public class ConcreteClassB extends AbstractClass {
         System.out.println("具体类B方法2 实现");    }
 
 
+    // 20141125
     public static final void main(String[] args) {
 
         AbstractClass c;
