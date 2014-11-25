@@ -15,6 +15,7 @@ public class Test {
     // 适配器模式（adapter）将一个类的接口转换成客户希望的另外一个接口
     //
 
+    // 20141125
     public static final void main(String[] args) {
         Player b = new Forwards("巴蒂尔");
         b.attach();
